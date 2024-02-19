@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Nickname</title>
+  </head>
+  <body>
+    <h2>Set Your Nickname</h2>
+    <form id="nicknameForm">
+      <input
+        id="nicknameInput"
+        type="text"
+        placeholder="Enter your nickname"
+        required
+      />
+      <button type="submit">Set Nickname</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+
+      var nicknameForm = document.getElementById("nicknameForm");
+      var nicknameInput = document.getElementById("nicknameInput");
+
+      nicknameForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var nickname = nicknameInput.value.trim();
+        if (nickname) {
+          window.location.href =
+            "/chat?nickname=" + encodeURIComponent(nickname); // Redirect to the chat page with the nickname as a query parameter
+        }
+      });
+    </script>
+  </body>
+</html>

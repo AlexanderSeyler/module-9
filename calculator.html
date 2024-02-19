@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      input[type="button"] {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <input type="text" id="display" disabled />
+      <div>
+        <input type="button" value="1" />
+        <input type="button" value="2" />
+        <input type="button" value="3" />
+        <input type="button" value="+" />
+      </div>
+      <div>
+        <input type="button" value="4" />
+        <input type="button" value="5" />
+        <input type="button" value="6" />
+        <input type="button" value="-" />
+      </div>
+      <div>
+        <input type="button" value="7" />
+        <input type="button" value="8" />
+        <input type="button" value="9" />
+        <input type="button" value="*" />
+      </div>
+      <div>
+        <input type="button" value="C" />
+        <input type="button" value="0" />
+        <input type="button" value="=" />
+        <input type="button" value="/" />
+      </div>
+    </div>
+
+    <script src="calculatorModel.js"></script>
+    <script src="calculatorView.js"></script>
+    <script src="calculatorController.js"></script>
+  </body>
+</html>
